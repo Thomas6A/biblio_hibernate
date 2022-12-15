@@ -1,6 +1,8 @@
 package net.codejava.hibernate;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
+
 
 public class Brief_biblio_2 {
 	public static void main(String[] args) {
@@ -14,34 +16,45 @@ public class Brief_biblio_2 {
 		System.out.println("6 - Rendre un livre");
 		System.out.println("7 - Fermer programme");
 		System.out.println("Saisissez votre choix:");
-		int choix = input.nextInt();
-		switch(choix) {
-		case 1:
-			Methode_livre.Creer_livre();
+		try {
+			int choix = input.nextInt();
+			switch (choix) {
+			case 1:
+				Methode_livre.Creer_livre();
+				main(null);
+				break;
+			case 2:
+				Methode_livre.Modifier_livre();
+				main(null);
+				break;
+			case 3:
+				Methode_livre.Liste_livre();
+				main(null);
+				break;
+			case 4:
+				Methode_livre.Detail_livre();
+				main(null);
+				break;
+			case 5:
+				Methode_livre.Emprunt_livre();
+				main(null);
+				break;
+			case 6:
+				Methode_livre.Rendu_livre();
+				main(null);
+				break;
+			case 7:
+				break;
+			default:
+				System.out.println("Choisissez l'un des choix ci-dessous");
+				main(null);
+			}
+		} catch (InputMismatchException e) {
+			System.out.println("Veuillez sélectionner un chiffre");
 			main(null);
-		case 2:
-			Methode_livre.Modifier_livre();
-			main(null);
-		case 3:
-			Methode_livre.Liste_livre();
-			main(null);
-		case 4:
-			Methode_livre.Detail_livre();
-			main(null);
-		case 5:
-			Methode_livre.Emprunt_livre();
-			main(null);
-		case 6:
-			Methode_livre.Rendu_livre();
-			main(null);
-		case 7:
-			break;
-		default:
-			System.out.println("Choisissez l'un des choix ci-dessous");
-			main(null);
-		}
+		} 
 		input.close();
-		
+
 	}
 
 }
