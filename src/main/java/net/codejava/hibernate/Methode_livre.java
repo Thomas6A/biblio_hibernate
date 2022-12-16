@@ -12,7 +12,10 @@ import javax.persistence.Persistence;
 import javax.persistence.Query;
 
 public class Methode_livre {
-
+	
+	/*
+	 * Méthode permettant de créer  un livre en saisissant son titre, son auteur, son genre, son nombre de page et son nombre d'exemplaire
+	 */
 	public static void Creer_livre() {
 		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
@@ -52,6 +55,11 @@ public class Methode_livre {
 		entityManager.close();
 		factory.close();
 	}
+	
+	/*
+	 * 	Méthode permettant de modifier un livre en saisissant son titre
+	 * Pour modifier une valeur il faut saisir le bon choix en chiffre
+	 */
 
 	public static void Modifier_livre() {
 		@SuppressWarnings("resource")
@@ -126,6 +134,10 @@ public class Methode_livre {
 		entityManager.close();
 		factory.close();
 	}
+	
+	/*
+	 * Méthode permettant de lister les livres contenu dans la base de donnée
+	 */
 
 	@SuppressWarnings("unchecked")
 	public static void Liste_livre() {
@@ -147,6 +159,10 @@ public class Methode_livre {
 		entityManager.close();
 		factory.close();
 	}
+	
+	/*
+	 * Méthode permettant d'avoir le détail d'un livre en saisissant son titre
+	 */
 
 	public static void Detail_livre() {
 
@@ -178,6 +194,10 @@ public class Methode_livre {
 		entityManager.close();
 		factory.close();
 	}
+	
+	/*
+	 * Méthode permettant d'emprunter un livre en saisissant son titre puis en saisissant un nom pour la réservation
+	 */
 
 	public static void Emprunt_livre() {
 
@@ -225,6 +245,10 @@ public class Methode_livre {
 		entityManager.close();
 		factory.close();
 	}
+	
+	/*
+	 * Méthode permettant de rendre un livre emprunté en saisissant son titre et le nom de la réservation. Puis comparer la date d'aujourd'hui avec la date pour de rendu.
+	 */
 
 	public static void Rendu_livre() {
 		@SuppressWarnings("resource")

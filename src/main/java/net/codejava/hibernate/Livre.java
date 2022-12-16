@@ -7,6 +7,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * Classe représentant un livre dans une bibliothèque.
+ * Cette classe est annotée avec @Entity pour indiquer qu'elle est mappée à une table de base de données.
+ * Elle est également annotée avec @Table pour spécifier le nom de la table à laquelle elle est mappée.
+ */
 @Entity
 @Table(name = "livre")
 public class Livre {
